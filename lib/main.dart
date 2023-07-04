@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:testproject/screen/landing.dart';
+import 'package:testproject/screen/home.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     systemNavigationBarColor: Colors.blue, // navigation bar color
-    statusBarColor: Colors.white60, // status bar color
+    statusBarColor: Colors.transparent, // status bar color
   ));
   await GetStorage.init();
   runApp(const MyApp());
@@ -39,6 +39,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const LandingScreen());
+        home: const Home());
   }
 }
