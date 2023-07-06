@@ -15,11 +15,11 @@ class BodyComponent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("This is appbar"),
+            const Text("This is auto deploy"),
             Image.network(url),
             Row(
               children: [
-                const Text("This is appbar"),
+                const Text("This is auto deploy"),
                 Flexible(child: Image.network(url)),
               ],
             )

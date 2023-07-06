@@ -23,7 +23,7 @@ class _LandingScreenState extends State<LandingScreen> {
       drawer: const Drawer(),
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: const Text("This is appbar"),
+        title: const Text("This is auto deploy"),
         actions: [
           IconButton(
               onPressed: () {
