@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:testproject/screen/home.dart';
+import 'package:testproject/screen/landing.dart';
+
+import 'firebase_options.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -9,6 +12,9 @@ Future<void> main() async {
     statusBarColor: Colors.transparent, // status bar color
   ));
   await GetStorage.init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -39,6 +45,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Home());
+        home: const LandingScreen());
   }
 }
