@@ -48,3 +48,4 @@ class MyApp extends StatelessWidget {
         home: const LandingScreen());
   }
 }
+//flutter build web --web-renderer html
